@@ -12,7 +12,6 @@ def generate_maze(size):
              for _ in range(size)] for _ in range(size)]
     maze[0][0]["type"] = "старт"
     maze[size - 1][size - 1]["type"] = "выход"
-    # ключ гарантированно кладём в случайную комнату
     free = [(i, j) for i in range(size) for j in range(size)
             if (i, j) not in [(0, 0), (size - 1, size - 1)]]
     kx, ky = random.choice(free)
